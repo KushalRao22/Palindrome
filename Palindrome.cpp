@@ -1,35 +1,40 @@
+/*
+This is a project that checks if input is a palindrome
+Last Modified 9/24
+By: Kushal Rao 
+*/
 #include <iostream>
 #include <cstring>
 using namespace std;
 
 int main(){
-  char str[80];
-  char str2[80];
-  char rstr[80];
+  char str[80];//Create String for Input
+  char str2[80];// String for all alnums and remove the rest
+  char rstr[80];// Create reverse String
   cin.get(str, 80);
-  int count = 0;
+  int count = 0;//To keep track of how many alnnums
   int palindromeNum = 0;
   for(int i = 0; i < 80 && str[i]  !='\0'; i++){
     if(isalnum(str[i])){
-      str2[count] = str[i];
+      str2[count] = str[i];//Add all alnums
       count++;
     }
   }
   for(int i = 0; i < count; i++){
-    str2[i] = tolower(str2[i]);
+    str2[i] = tolower(str2[i]);//Make it lower case
   }
   for(int i = 0; i < count; i++){
-    rstr[i] = str2[count-i-1];
+    rstr[i] = str2[count-i-1];//reverse the array
   }
   for(int i = 0; i < count; i++){
-    if(rstr[i] == str2[i]){
+    if(rstr[i] == str2[i]){//check if each the charecters are the same as flipped
       palindromeNum++;
       }
   }
-  if(palindromeNum == count){
-    cout << "Palindrome" << endl;
+  if(palindromeNum == count){//If all charecters can be flipped
+    cout << "Palindrome" << endl;// Say it is a Palindrome
   }
   else{
-    cout << "Not a Palindrome" << endl;
+    cout << "Not a Palindrome" << endl;//Say it is not a palindrome
   }
 }
