@@ -1,8 +1,9 @@
 /*
 This is a project that checks if input is a palindrome
-Last Modified 9/24
+Last Modified 9/26
 By: Kushal Rao 
 */
+
 #include <iostream>
 #include <cstring>
 using namespace std;
