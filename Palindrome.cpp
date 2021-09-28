@@ -1,6 +1,6 @@
 /*
 This is a project that checks if input is a palindrome
-Last Modified 9/26
+Last Modified 9/28
 By: Kushal Rao 
 */
 
@@ -9,10 +9,10 @@ By: Kushal Rao
 using namespace std;
 
 int main(){
-  char str[80];//Create String for Input
-  char str2[80];// String for all alnums and remove the rest
-  char rstr[80];// Create reverse String
-  cin.get(str, 80);
+  char str[81];//Create String for Input
+  char str2[81];// String for all alnums and remove the rest
+  char rstr[81];// Create reverse String
+  cin.get(str, 81);
   int count = 0;//To keep track of how many alnnums
   int palindromeNum = 0;
   for(int i = 0; i < 80 && str[i]  !='\0'; i++){
@@ -28,7 +28,7 @@ int main(){
     rstr[i] = str2[count-i-1];//reverse the array
   }
   for(int i = 0; i < count; i++){
-    if(rstr[i] == str2[i]){//check if each the charecters are the same as flipped
+    if(rstr[i] == str2[i]){//check if each the charectars is the same as flipped
       palindromeNum++;
       }
   }
